@@ -333,16 +333,6 @@ public class MainActivity extends PreferenceActivity {
         boolean firstRun = prefs.getBoolean(FIRST_RUN, true);
 
         if (firstRun) {
-            if (!Utils.isParanoidRom()) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
-                builder.setMessage(R.string.no_pa_rom_content)
-                        .setTitle(R.string.no_pa_rom_title)
-                        .setPositiveButton(R.string.no_pa_rom_ok, null);
-
-                AlertDialog dialog = builder.create();
-                dialog.show();
-            }
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean(FIRST_RUN, false).commit();
         }

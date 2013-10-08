@@ -35,10 +35,6 @@
     <string name="notes">Notes</string>
     <string name="note">Note</string>
     <string name="empty">Empty note</string>
-
-    <string name="no_pa_rom_title">Your are not running a compatible ROM!</string>
-    <string name="no_pa_rom_content">HALO))) is explicitly designed to work on ParanoidAndroid ROMs. You will not be able to unleash the full potential of the application!</string>
-    <string name="no_pa_rom_ok">Ok</string>
     
     <string name="description_1">Helper 1</string>
     <string name="description_2">Helper 2</string>

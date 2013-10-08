@@ -209,25 +209,4 @@ public class Utils {
             // Skip this application
         }
     }
-
-    public static String getProp(String prop) {
-        try {
-            Process process = Runtime.getRuntime().exec("getprop " + prop);
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
-                    process.getInputStream()));
-            StringBuilder log = new StringBuilder();
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                log.append(line);
-            }
-            return log.toString();
-        } catch (IOException e) {
-            // Runtime error
-        }
-        return null;
-    }
-
-    public static boolean isParanoidRom() {
-        return getProp(PA_PROPERTY).equals(Boolean.TRUE.toString().toLowerCase());
-    }
 }
